@@ -1,0 +1,24 @@
+# Cabal build artifacts
+dist-newstyle/
+*.o
+*.hi
+
+# Cabal user config
+cabal.project.local
+cabal.project.local~
+
+# Stack build artifacts
+.stack-work/
+
+# Haskell Language Server
+.hls/
+.ghc.environment.*
+
+# Editor/OS files
+*.swp
+*.swo
+*~
+.DS_Store 
+
+todo.md
+project.md
