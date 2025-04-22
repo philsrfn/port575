@@ -2,7 +2,7 @@
 
 A minimalist web server built with Haskell and the Scotty web framework that serves quiz questions in haiku form. I mainly built this to learn about Scotty!
 
-Access it on [https://haiku.philhrtm.xyz](https://philhrtm.xyz/)
+Access it on [https://haiku.philhrtm.xyz](https://haiku.philhrtm.xyz/)
 
 Designed as a pure JSON API, but includes a basic check to serve HTML instructions if accessed via a standard web browser.
 
