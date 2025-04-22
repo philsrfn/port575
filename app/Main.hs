@@ -18,11 +18,9 @@ import Data.List (isInfixOf)
 import qualified Data.ByteString.Char8 as BS8
 import Network.Wai (requestHeaders)
 
--- HTML to serve to browsers (single line)
 instructionHTML :: Text
 instructionHTML = "<!DOCTYPE html><html><head><title>Haiku Quiz API</title><style>body{font-family: sans-serif; line-height: 1.6; background-color: #f0f0f0; color: #333; max-width: 600px; margin: 2em auto; padding: 1em; border: 1px solid #ccc; border-radius: 5px;} code{background-color: #e8e8e8; padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace;}</style></head><body><h1>🌸 Haiku Quiz API</h1><p>Browser access not intended.</p><p><em>Please use <code>curl</code> or another API client.</em></p><hr><p><strong>Endpoints:</strong></p><ul><li><code>GET /question</code> - Get a new haiku question.</li><li><code>POST /answer</code> - Submit answer (JSON: <code>{\"submittedAnswer\": \"guess\"}</code>).</li><li><code>POST /reset</code> - Reset the current question state.</li></ul></body></html>"
 
--- Helper function to check if User-Agent looks like a browser
 isBrowser :: ActionM Bool
 isBrowser = do
     uaHeader <- lookup "User-Agent" . requestHeaders <$> request
