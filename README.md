@@ -2,6 +2,8 @@
 
 A minimalist web server built with Haskell and the Scotty web framework that serves quiz questions in haiku form. I mainly built this to learn about Scotty!
 
+Access it on [https://haiku.philhrtm.xyz](https://philhrtm.xyz/)
+
 Designed as a pure JSON API, but includes a basic check to serve HTML instructions if accessed via a standard web browser.
 
 Notably, the core server logic in `app/Main.hs` is kept under 100 lines of code.
@@ -57,8 +59,4 @@ Use `curl` or any other API client.
 
 ## Browser Access
 
-Accessing the endpoints directly in a web browser will display a simple HTML page with instructions, as the API is intended for programmatic use.
-
-## Deployment Example
-
-This project includes an example deployment setup using `systemd` for process management and Nginx as a reverse proxy. Refer to the conversation history or standard Haskell/Nginx deployment practices for details. 
+Accessing the endpoints directly in a web browser will display a simple HTML page with instructions, as the API is intended.
